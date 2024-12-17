@@ -13,6 +13,7 @@ def get_prime_number(max_limit=10000):
         nums += 1
     return primes
 
+
 def get_fibonacci_numbers(max_limit=10000):
     fibos = list()
     F0 = FN_2 = 1
@@ -23,11 +24,12 @@ def get_fibonacci_numbers(max_limit=10000):
             # print(FN)
             fibos.append(FN)
         else:
-            break # 強制跳出"迴圈"
+            break  # 強制跳出"迴圈"
         FN_1, FN_2 = FN, FN_1
     return fibos
 
+
 if __name__ == "__main__":
     n = 100
-    print(f"get prime number <{n}" , get_prime_number(n))
-    print(f"get fibonacci number <{n}" , get_fibonacci_numbers(n))
+    print(f"get prime number <{n}", get_prime_number(n))
+    print(f"get fibonacci number <{n}", get_fibonacci_numbers(n))
