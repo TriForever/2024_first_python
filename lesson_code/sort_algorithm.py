@@ -5,6 +5,7 @@ def my_buble_sort(num_list: list, is_log=False):
             if num_list[index] > num_list[index + 1]:
                 num_list[index], num_list[index +
                                           1] = num_list[index + 1], num_list[index]
+
         print(round, num_list) if is_log else None
     print(num_list) if is_log else None
     return num_list
