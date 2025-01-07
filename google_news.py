@@ -14,6 +14,11 @@ soup = BeautifulSoup(res.text, 'html.parser')
 topic_elements = soup.find_all("div", class_="W8yrY")
 
 for topic_element in topic_elements:
-    left_side = topic_element.find("a", class_="gPFEn")
-    print(left_side.text)
-    print(left_side["href"])
+
+    topic_titles = soup.find_all("a", class_="gPFEn")
+    for topic_title in topic_titles:
+        print(topic_title.text)
+        print(topic_title["href"], "\n")
+    # left_side = topic_element.find("a", class_="gPFEn")
+    # print(left_side.text)
+    # print(left_side["href"])
