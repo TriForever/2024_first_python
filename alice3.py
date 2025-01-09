@@ -54,9 +54,9 @@ for topic_index, topic in enumerate(topics):
 
     for mag, title, time in zip(mags, titles, times):
 
-        # print(mag.text)
-        # print(title.text)
-        # print(time["datetime"], "\n")
+        print(mag.text)
+        print(title.text)
+        print(time["datetime"], "\n")
 
         list_of_news.append(
             {
@@ -64,7 +64,8 @@ for topic_index, topic in enumerate(topics):
                 "media": mag.text,
                 "title": title.text,
                 "url": "https://news.google.com"+title["href"][1:],
-                "time": time["datetime"]})
+                "time": time["datetime"]
+            })
 
-        df = pd.DataFrame(list_of_news)
-        df.to_csv("news.csv")
+df = pd.DataFrame(list_of_news)
+df.to_csv("news.csv")
