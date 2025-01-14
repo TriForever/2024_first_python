@@ -2,7 +2,7 @@ import pandas as pd
 from openai_chatgpt_example import start_chat
 
 
-def summarize_news(csv_file="news.csv"):
+def summarize_news(csv_file="news.csv", max_topic=5):
     news = pd.read_csv(csv_file)
 
     # records = news.to_dict(orient="records")
@@ -22,6 +22,9 @@ def summarize_news(csv_file="news.csv"):
         # print(test)
         # print(list(group["title"]))
         # break
+        if gid >= max_topic-1:
+            print('Summarization Done.')
+            break
 
     return summarize_list
 
